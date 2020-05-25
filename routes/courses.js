@@ -23,7 +23,7 @@ router.get('/:id/edit', auth, async (req, res) => {
   if (course.userId.toString() !== req.user._id.toString()) {
     return res.redirect('/courses')
   }
- 
+
   res.render('course-edit', {
     title: `Edit ${course.title}`,
     course
